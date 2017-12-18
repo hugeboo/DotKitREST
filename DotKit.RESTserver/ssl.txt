@@ -1,0 +1,46 @@
+﻿
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>netsh http add sslcert ip
+port=0.0.0.0:8087 certhash=940d935ccf4bc31728f9e5c22de36e90ac3f2d5b appid={40269
+035-e289-4991-a55d-73402f47cf1c} certstorename=My verifyclientcertrevocation=dis
+able
+
+Сертификат SSL успешно добавлен
+
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>netsh http del sslcert ip
+port=0.0.0.0:8087
+
+Сертификат SSL успешно удален
+
+
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>netsh http add sslcert ip
+port=0.0.0.0:8088 certhash=940d935ccf4bc31728f9e5c22de36e90ac3f2d5b appid={40269
+035-e289-4991-a55d-73402f47cf1c} certstorename=My verifyclientcertrevocation=dis
+able
+
+Сертификат SSL успешно добавлен
+
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>netsh http del sslcert ip
+port=0.0.0.0:8088
+
+Сертификат SSL успешно удален
+
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>netsh http add sslcert ip
+port=0.0.0.0:8091 certhash=940d935ccf4bc31728f9e5c22de36e90ac3f2d5b appid={40269
+035-e289-4991-a55d-73402f47cf1c} certstorename=My verifyclientcertrevocation=dis
+able
+
+Сертификат SSL успешно добавлен
+
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>rem makecert -n "CN=vMarg
+eCA" -r -sv vMargeCA.pvk vMargeCA.cer
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>rem makecert -sk vMargeSi
+gnedByCA -iv vMargeCA.pvk -n "CN=vMargeSignedByCA" -ic vMargeCA.cer vMargeSigned
+ByCA.cer -sr localmachine -ss My
+
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC>
