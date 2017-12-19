@@ -240,7 +240,7 @@ namespace DotKit.RESTserver
                     }
                     catch (Exception ex)
                     {
-                        logger.ErrorException("Authorization error", ex);
+                        logger.Error("Authorization error", ex);
                         ok = false;
                     }
 
