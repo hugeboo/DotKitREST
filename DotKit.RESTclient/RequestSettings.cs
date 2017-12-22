@@ -8,7 +8,7 @@ namespace DotKit.RESTclient
     /// <summary>
     /// Параметры запроса
     /// </summary>
-    public sealed class RequestSettings
+    public sealed class RequestSettings : ICloneable
     {
         /// <summary>
         /// Адрес сервера
@@ -40,5 +40,10 @@ namespace DotKit.RESTclient
         /// Пароль (для авторизации)
         /// </summary>
         public string Password { get; set; }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
+        }
     }
 }
